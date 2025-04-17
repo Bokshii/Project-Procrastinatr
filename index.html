@@ -10,7 +10,9 @@
   <title>Procrastinatr™ - Look Busy, Do Nothing</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <audio id="nope-sound" src="https://freesound.org/data/previews/325/325439_4939433-lq.mp3"></audio>
 </head>
+
 <body>
   
   <nav class="navbar">
@@ -35,43 +37,62 @@
 
   <section class="features">
     <div class="feature-box">
-      <h3>Perma-Todo™ List</h3>
-      <p>Tasks that always stay "in progress". Satisfaction not guaranteed.</p>
+        <h3>Perma-Todo™ List</h3>
+        <p>Tasks that always stay "in progress". Satisfaction not guaranteed.</p>
     </div>
     <div class="feature-box">
-      <h3>Focus Timer (Beta)</h3>
-      <p>Starts in 5...4...okay maybe later.</p>
+        <h3>Focus Timer (Beta)</h3>
+        <p>Starts in 5...4...okay maybe later.</p>
     </div>
     <div class="feature-box">
-      <h3>Productivity Graph</h3>
-      <p>Beautiful charts showing your steadily declining motivation.</p>
+        <h3>Productivity Graph</h3>
+        <p>Beautiful charts showing your steadily declining motivation.</p>
     </div>
-  </section>
+</section>
+
   
-  <section id="focus-timer" class="fade-in">
+<section id="focus-timer" class="fade-in">
     <h2>Ultimate Focus Timer™</h2>
     <p>Because pretending to focus is the first step.</p>
     <div class="timer-box">
       <span id="minutes">25</span>:<span id="seconds">00</span>
     </div>
     <button id="start-btn">Start Focusing</button>
-  </section>
+</section>
   
-  <section class="testimonials">
+<section class="testimonials">
     <h2>What our users almost said:</h2>
     <p>"I've never felt so busy doing nothing."</p>
     <p>"Procrastinatr saved my nap schedule."</p>
     <p>"It almost made me start a business... but I didn’t."</p>
-  </section>
+    <p>"Thanks to Procrastinatr™, I can now ignore tasks in style."</p>
+    <p>"I opened it to be productive. Three hours later, I was naming my plants."</p>
+    <p>"Finally, an app that matches my energy: none."</p>
+    <p>"My manager thinks I'm deep in a spreadsheet. I'm actually watching raccoon videos."</p>
+    <p>"Procrastinatr didn’t change my life, and that’s exactly the point."</p>
+    <p>"10/10. Would delay everything again."</p>
+</section>
 
-  <section class="about">
+<section id="task-form" class="fade-in">
+    <h2>Task Avoidance Assistant™</h2>
+    <p>Enter your task below. We'll make sure you avoid it responsibly.</p>
+    <form id="avoid-form">
+      <input type="text" id="task-input" placeholder="e.g., Clean my room" required />
+      <button type="submit">Avoid Task</button>
+    </form>
+    <p id="response" class="tagline"></p>
+</section>
+  
+<section class="about">
     <h2>About Us</h2>
     <p>We founded Procrastinatr™ while avoiding a group project. Our mission? Avoid yours.</p>
-  </section>
+</section>
 
-  <footer>
+<footer>
     © 2025 Procrastinatr™. All rights delayed.
-  </footer>
-  <script src="script.js"></script>
+</footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 </body>
 </html>
