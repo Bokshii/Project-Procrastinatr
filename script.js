@@ -86,5 +86,58 @@ window.addEventListener("DOMContentLoaded", function () {
             featureDescription.innerText = featureData[tabKey].desc;
         });
     });
+  
+// I'll Do It Tomorrow button functionality
+const ctaButton = document.querySelector('.cta-btn');
+let currentAudio = null; // Variable to track the currently playing audio
+
+ctaButton.addEventListener('click', () => {
+  // Array of absurd messages
+  const messages = [
+    "What was I supposed to do again? Oh, right, never mind.",
+    "Procrastination level: Infinity.",
+    "Did you really expect me to do anything?",
+    "Time is an illusion. I’ll do it tomorrow… or not.",
+    "I just… I just need a snack.",
+    "Maybe in a parallel universe I’ll do it… but this one? Nope.",
+    "I’ll do it after the next cat video.",
+    "I’m not even sure what I’m procrastinating at this point."
+  ];
+
+  // Change the button text to an even worse message
+  ctaButton.innerText = messages[Math.floor(Math.random() * messages.length)];
+
+  // Do absolutely nothing else (except making the page look even more pointless)
+  const randomPosition = Math.floor(Math.random() * document.body.scrollHeight);
+  window.scrollTo(0, randomPosition); // Scroll randomly (making it worse)
+
+
+  // Play a random sound from MyInstants, but prevent overlap
+  const sounds = [
+    'https://www.myinstants.com/media/sounds/movie_1.mp3',
+    'https://www.myinstants.com//media/sounds/erro.mp3',
+    'https://www.myinstants.com/media/sounds/never-gonna-give-you-up.mp3',
+    'https://www.myinstants.com/media/sounds/meme-song.mp3',
+    'https://www.myinstants.com//media/sounds/tmpauxfo4ff.mp3',
+    'https://www.myinstants.com/media/sounds/man-snoring-meme_ctrllNn.mp3'
+  ];
+
+  const randomSound = sounds[Math.floor(Math.random() * sounds.length)];
+
+  // Stop the previous sound if it's playing
+  if (currentAudio && !currentAudio.paused) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0; // Reset the audio to the start
+  }
+
+  // Create a new audio element and play the random sound
+  currentAudio = new Audio(randomSound);
+  currentAudio.play();
+
+  // Alert the user for no reason
+  alert("Procrastination level: Unmatched. You're winning... at nothing!");
+});
+
+
 });
 
